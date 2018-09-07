@@ -1,0 +1,78 @@
+<!--pages/uporder/uporder.wxml-->
+
+
+<view>
+  <image src='../../images/fenge.png' class='fenge'></image>
+  <view class='dingdan_top' bindtap='openModal'>
+    <view style='flex-grow:1'>
+      <image src='../../images/dingwei.png' class='dingwei'></image>
+    </view>
+    <view class='header_right'>
+      <view class='header_right_top'>
+        <text class='user_title'>收货人:{{address[index][0]}}</text>
+        <text>{{address[index][1]}}</text>
+      </view>
+      <view>
+        <text class='address'>收货地址：{{address[index][2]}}</text>
+      </view>
+    </view>
+  </view>
+  <image src='../../images/fenge.png' class='fenge'></image>
+</view>
+<!-- 商品 -->
+<view class='item_p'>
+  <view class='item_main' wx:for="{{items}}" wx:key="{{item.item._id}}">
+    <view>
+      <image src='{{preIP+item.item.itemImg[0]}}' class='item_img'></image>
+    </view>
+    <view>
+      <view>
+        <text class='item_name'>{{item.item.itemName}}</text>
+      </view>
+      <view>
+        <text class='item_sel'>{{item.sel}}</text>
+      </view>
+      <view class='bottom_space'>
+        <text class='item_price'>￥{{item.item.itemPrices}}</text>
+        <text class='item_count'>x {{item.count}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+<!-- 底部提交 -->
+<view class='bottom_sub'>
+  <view class='btn_out'>
+    <text>合计:</text>
+    <text class='item_price'>￥{{total}}</text>
+    <text class='upDing' bindtap='toPay'>提交订单</text>
+  </view>
+</view>
+
+
+
+
+
+
+
+<i-modal title="选择收货地址" visible="{{ visible }}"  bind:cancel="closeModal" show-ok="{{noshow}}" show-cancel="{{noshow}}">
+  <scroll-view scroll-y="true" height='400'>
+    <radio-group bindchange="radioChange">
+      <view class='addr_eve' wx:for="{{address}}" wx:key="{{item}}">
+        <label class='addr_sty'>
+          <radio value="{{index}}" class='radio_sty'></radio>
+          <view class='addr_right'>
+            <view class='addr_top'>
+              <text>{{item[0]}} </text>
+              <text> {{item[1]}}</text>
+            </view>
+            <view>
+              <text class='addr_text'>{{item[2]}}</text>
+            </view>
+          </view>
+        </label>
+      </view>
+    </radio-group>
+  </scroll-view>
+</i-modal>

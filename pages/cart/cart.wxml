@@ -1,0 +1,55 @@
+<!--pages/cart/cart.wxml-->
+<view class='cart_header'>
+  <view>
+    <text class='cart_text'>购物车</text>
+  </view>
+  <view>
+    <text class='cart_count'>共{{shopCart.length}}件宝贝</text>
+  </view>
+</view>
+<!-- 购物车 -->
+<view class='cat_bg'>
+  <view class='show_pos'>
+      <checkbox-group current="{{current}}" bindchange="chooseChange">
+        <view class='cart_out' wx:for="{{shopCart}}" wx:key="{{item._id}}" >
+        <view class='checkbox_par'>
+               <checkbox position="{{position}}" i-class='checkboxSize' value='{{index}}' class='checkbox_circle' checked='{{allNot}}'>
+        </checkbox>
+        </view>
+          <view>
+            <image src="{{preIP+item.itemImg[0]}}" class='item_img'></image>
+          </view>
+          <view class='item_right'>
+            <view>
+              <text class='item_name'>{{item.itemName}}</text>
+            </view>
+            <view class='sec_par'>
+              <text class='item_sec'>选择白色 {{sel[index]}}</text>
+            </view>
+            <view class='price_par'>
+              <view>
+                <text class='item_price'>{{item.itemPrices}}元</text>
+              </view>
+              <view class='count_style'>
+                <button class='countBtn' bindtap='decCount' data-id="{{item._id}}" data-index='{{index}}'>-</button>
+                <text class='count_text'>{{item.count}}</text>
+                <button class='countBtn' bindtap='addCount' data-id="{{item._id}}" data-index='{{index}}'>+</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+  </view>
+</view>
+<!-- 底部结算 -->
+<view class='footer'>
+<view class='sel_all'>
+  <checkbox id='selAll'  bindtap='selClick' checked='{{allState}}'></checkbox><label class='all_text' for='selAll' bindtap='selClick'>全选</label>
+</view>
+<view class='total_all'>
+  <text>总计:</text><text class='total_money'>{{total}}元</text>
+</view>
+<view class='buy_fin'>
+<text class="{{showColor?'jiesuan':'jiesuan_dis'}}" bindtap='buyNow'>结算({{buyLength}})</text>
+</view>
+</view>

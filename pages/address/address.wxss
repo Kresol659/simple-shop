@@ -1,0 +1,26 @@
+/* pages/address/address.wxss */
+.addressBtn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.addr_main{
+  width: 90%;
+  margin: 0 auto 30rpx auto;
+  padding: 15rpx;
+  background-color: rgb(235, 232, 232);
+  border-radius: 15rpx;
+}
+.addr_top{
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.addr_text{
+  font-size: 32rpx;
+}
+.addr_phone{
+  display: inline-block;
+  margin-left: 30rpx;
+  font-weight: normal;
+  font-size: 36rpx;
+}

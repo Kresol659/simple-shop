@@ -1,0 +1,107 @@
+<!--pages/my/my.wxml-->
+<view class='outside_main'>
+  <view class='user_top'>
+    <view class='outside_f'>
+      <image src='{{preIP+user[0].uhead}}' class='user_head' wx:if="{{show}}" bindtap='goMyInfo'></image>
+      <image src='../../images/default1.png' class='user_head' bindtap='goLogin' wx:else></image>
+    </view>
+    <view class='outside_r'>
+      <view class='outside_l' >
+        <text wx:if="{{show}}">{{user[0].uname}}</text>
+        <text bindtap='goLogin' wx:else>登录/注册 ></text>
+      </view>
+      <view class='outside_s'>
+        <i-tag class="i-tags" name="会员" color="blue" wx:if="{{show}}">
+          会员
+        </i-tag>
+      </view>
+    </view>
+  </view>
+  <!-- 购买信息 -->
+  <i-tab-bar current="{{ current }}" bind:change="goPage">
+    <i-tab-bar-item key="01" icon="coupons" current-icon="coupons_fill" title="代付款"></i-tab-bar-item>
+    <i-tab-bar-item key="02" icon="tasklist" current-icon="tasklist_fill" title="待收货"></i-tab-bar-item>
+    <i-tab-bar-item key="03" icon="message" current-icon="message_fill" title="待评价" count="3"></i-tab-bar-item>
+    <i-tab-bar-item key="04" icon="customerservice" current-icon="customerservice_fill" title="退换/售后"></i-tab-bar-item>
+    <i-tab-bar-item key="05" icon="task" current-icon="task_fill" title="我的订单"></i-tab-bar-item>
+  </i-tab-bar>
+  <i-divider height="15"></i-divider>
+  <!-- 福利 -->
+  <view class='sec_line'>
+    <view class='sec_main'>
+      <view>
+        <text class='sec_headtext'>1</text>
+      </view>
+      <text class='sigin_in'>签到</text>
+    </view>
+    <view class='sec_main'>
+      <view>
+        <text class='sec_headtext'>1</text>
+      </view>
+      <text class='sigin_in_b'>优惠券</text>
+    </view>
+    <view class='sec_main'>
+      <view>
+        <text class='sec_headtext'>1</text>
+      </view>
+      <text class='sigin_in_b'>借一笔</text>
+    </view>
+    <view class='sec_main'>
+      <view>
+        <text class='sec_headtext'>1</text>
+      </view>
+      <text class='sigin_in_b'>我的钱包</text>
+    </view>
+  </view>
+  <i-divider height="15"></i-divider>
+  <!-- 关注 -->
+  <view class='collected'>
+    <view>
+      <view>
+        <text>0</text>
+      </view>
+      <text class='thir_text'>我的关注</text>
+    </view>
+    <view>
+      <view>
+        <text>{{user[0].collectBaby.length}}</text>
+      </view>
+      <text class='thir_text'>我的收藏</text>
+    </view>
+    <view>
+      <view>
+        <text>0</text>
+      </view>
+      <text class='thir_text'>我喜欢的</text>
+    </view>
+    <view>
+      <view>
+        <text>0</text>
+      </view>
+      <text class='thir_text'>浏览记录</text>
+    </view>
+     <view bindtap='goAddress'>
+      <view>
+        <text>{{user[0].sendAddr.length}}</text>
+      </view>
+      <text class='thir_text'>收货地址</text>
+    </view>
+  </view>
+  <i-divider height="15"></i-divider>
+
+  <!-- 其他推荐内容 -->
+  <view class='other_content'>
+    <view class='hand_app'>
+      <text class='red_split'></text>
+      <text>合作app</text>
+    </view>
+    <view class='friend_app'>
+      <view wx:for="{{friendLink}}" wx:key="{{item.name}}" class='other_main'>
+        <view>
+          <image src="{{item.url}}" class='friendImg'></image>
+        </view>
+        <text class='app_name'>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/myInfo/myInfo.wxml-->
+<text bindtap='exit'>退出</text>

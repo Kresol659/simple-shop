@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<!-- 轮播 -->
+<scroll-view scroll-y="true" bindscroll="scroll" class='scroll_px'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 顶部搜索 -->
+  <view class='{{topStyle}}'>
+    <i-icon type="createtask" color='#fff' size="36" />
+    <i-panel>
+      <i-input value="{{ value6 }}" type="text" mode="normal" i-class="{{searchKuang}}" placeholder="搜索...." />
+    </i-panel>
+    <i-icon type="add" color='#fff' size="36" />
+  </view>
+
+  <view class='service'>
+    <view wx:for="{{serimgs}}" class='service_eve' wx:key="{{item.name}}">
+      <view>
+        <image src="{{item.src}}" class='ser_img'></image>
+        <block>
+          <text>
+  {{item.name}}
+  </text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 无用大图 -->
+  <view class='nothing_bg'>
+    <image src='{{thirImg[0]}}' class='banner_mid1'></image>
+    <image src='{{thirImg[1]}}' class='banner_mid2'></image>
+    <image src='{{thirImg[2]}}' class='banner_mid3'></image>
+  </view>
+  <!-- 商品 -->
+  <view class='item_bg'>
+    <view class='item_main' wx:for="{{goods}}" wx:key="{{item._id}}" data-id="{{item._id}}" bindtap='goDetails'>
+      <view>
+        <image src="{{preIP+item.itemImg[0]}}" class='item_img'></image>
+      </view>
+      <view>
+        <text class='item_name'>{{item.itemName}}</text>
+      </view>
+      <view class='item_bottom'>
+        <text class='item_price'>￥{{item.itemPrices}}</text>
+        <text class='item_sell'>{{item.sales}}人付款</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

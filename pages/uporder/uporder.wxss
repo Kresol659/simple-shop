@@ -1,0 +1,200 @@
+/* pages/uporder/uporder.wxss */
+
+.dingwei {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.dingdan_top {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  height: 140rpx;
+  line-height: 1.5;
+  padding: 20rpx;
+  justify-content: space-between;
+}
+
+.user_title {
+  font-size:36rpx;
+  font-weight: bold;
+}
+
+.header_right {
+  font-size: 38rpx;
+  margin-left: 40rpx;
+  flex-grow: 2;
+}
+
+.address {
+  font-size: 30rpx;
+}
+
+.header_right_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fenge {
+  width: 100%;
+  height: 10rpx;
+}
+
+.item_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.item_p{
+margin-bottom: 100rpx;
+}
+
+.item_img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.item_name {
+  font-size: 30rpx;
+  font-weight: bold;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+
+.item_count {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.item_sel {
+  font-size: 28rpx;
+}
+
+.item_price {
+  color: red;
+  margin-right: 20rpx;
+}
+
+.bottom_space {
+  display: flex;
+  font-size: 26rpx;
+  justify-content: space-between;
+}
+
+.bottom_sub {
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1rpx solid rgb(240, 240, 240);
+  text-align: right;
+  padding: 10rpx 20rpx;
+}
+
+.upDing {
+  padding: 25rpx 40rpx;
+ background-image: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);
+  color: #fff;
+  font-size: 36rpx;
+}
+.btn_out{
+  height: 100%;
+  margin-top: 15rpx;
+}
+.addr_top{
+    font-size: 38rpx;
+}
+.addr_text{
+  font-size: 32rpx;
+  display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+}
+.addr_right{
+  margin-left: 80rpx;
+}
+.addr_eve{
+  width: 90%;
+  margin: auto;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid rgb(245, 245, 245);
+}
+.radio_sty{
+  width: 50rpx;
+}
+.addr_sty{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  重写 radio 样式  */
+/* 未选中的 背景样式 */
+radio .wx-radio-input{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx;
+   height: 40rpx;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+   border: none;
+   background: red;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,140 @@
+/**index.wxss**/
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.search_top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.search_top_change {
+    width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(228, 49, 48);
+  padding: 10rpx 0;
+}
+.search_box {
+  margin: 10rpx 20rpx;
+  padding: 0 50rpx !important;
+  border-radius: 30rpx;
+  width: 455rpx;
+opacity: 0.5;
+}
+.search_box_change {
+  margin: 10rpx 20rpx;
+  padding: 0 50rpx !important;
+  border-radius: 30rpx;
+  width: 455rpx;
+opacity: 1;
+}
+.icon_menu {
+  font-size: 50rpx;
+}
+
+.service {
+  position: relative;
+  top: -15rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  padding: 20rpx 0;
+  background-color: #fff;
+  align-items: center;
+}
+
+.service_eve {
+  width: 150rpx;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 1.5;
+  margin: 15rpx 0;
+  color: rgb(70, 66, 66);
+}
+
+.ser_img {
+  width: 80rpx;
+  height: 80rpx;
+}
+.itemsShow{
+  margin-top: 50rpx;
+}
+
+.banner_mid1{
+  width: 100%;
+  height: 70rpx;
+}
+.banner_mid2,.banner_mid3{
+  width: 100%;
+   height: 200rpx;
+  }
+  .nothing_bg{
+      background-color: rgb(245, 245, 245);
+  }
+  .item_bg{
+    background-color: rgb(245, 245, 245);
+    padding: 20rpx 10rpx;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .item_img{
+    width: 344rpx;
+    height:344rpx;
+      border-top-left-radius: 20rpx;
+      border-top-right-radius: 20rpx;
+  }
+  .item_name{
+    width: 92%;
+    height: 82rpx;
+    font-size: 30rpx;
+    padding: 5rpx 10rpx; 
+     display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+  }
+  .item_price{
+        font-size: 30rpx;
+        color: rgb(231, 49, 49);
+  }
+  .item_sell{
+    margin-left: 20rpx;
+     font-size: 28rpx;
+     color: rgb(172, 172, 172);
+  }
+  .item_main{
+    width: 47%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin: 10rpx;
+  }
+  .item_bottom{
+    display: flex;
+  flex-flow: row nowrap;
+  padding: 5rpx 10rpx; 
+  align-items: center;
+  }
+  .scroll_px{
+    height:1070rpx;
+  }

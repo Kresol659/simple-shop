@@ -1,0 +1,129 @@
+<!--pages/order/order.wxml-->
+<i-tabs current="{{ current }}" bindchange="handleChange">
+  <i-tab key="t0" title="代付款" count="3"></i-tab>
+  <i-tab key="t1" title="待收货"></i-tab>
+  <i-tab key="t2" title="待评价" dot></i-tab>
+  <i-tab key="t3" title="所有订单" dot></i-tab>
+</i-tabs>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <!-- 代付款 -->
+  <swiper-item>
+    <view class='swiper_con'>
+      <scroll-view scorll-y="true" height="100%" class='item_main'>
+        <view class='item_line' wx:for="{{buyNo}}" wx:key="item.item" bindtap='toPay' data-index="{{item.index}}" data-price="{{item.item.itemPrices}}" data-count="{{item.item.count}}">
+          <view class='item_left'>
+            <image src="{{preIP+item.item.itemImg[0]}}" class='item_img'></image>
+          </view>
+          <view style="line-height: 1.8;">
+            <view>
+              <text class='item_title'>{{item.item.itemName}}</text>
+            </view>
+            <view>
+              <text class='item_sel'>{{item.item.sel}}</text>
+            </view>
+            <view class='item_bottom'>
+              <text class='item_prices'>{{item.item.itemPrices}}</text>
+              <text class='item_count'>x{{item.item.count}}</text>
+            </view>
+            <view style=' text-align: right;'>
+              <text class='wei'>待付款</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </swiper-item>
+  <!-- 待收货 -->
+  <swiper-item>
+    <view class='swiper_con'>
+
+      <scroll-view scorll-y="true" height="100%" class='item_main'>
+        <view class='item_line' wx:for="{{buyOk}}" wx:key="item.item" bindtap='toAnswer' data-index="{{item.index}}" data-price="{{item.item.itemPrices}}" data-count="{{item.item.count}}">
+          <view class='item_left'>
+            <image src="{{preIP+item.item.itemImg[0]}}" class='item_img'></image>
+          </view>
+          <view style="line-height: 1.8;">
+            <view>
+              <text class='item_title'>{{item.item.itemName}}</text>
+            </view>
+            <view>
+              <text class='item_sel'>{{item.item.sel}}</text>
+            </view>
+            <view class='item_bottom'>
+              <text class='item_prices'>{{item.item.itemPrices}}</text>
+              <text class='item_count'>x{{item.item.count}}</text>
+            </view>
+            <view style=' text-align: right;'>
+              <text class='yi'>待收货</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+
+    </view>
+  </swiper-item>
+  <!-- 待评价 -->
+  <swiper-item>
+    <view class='swiper_con'>
+      <scroll-view scorll-y="true" height="100%" class='item_main'>
+        <view class='item_line' wx:for="{{answer}}" wx:key="item.item" bindtap='toAnswer' data-index="{{item.index}}" data-price="{{item.item.itemPrices}}" data-count="{{item.item.count}}">
+          <view class='item_left'>
+            <image src="{{preIP+item.item.itemImg[0]}}" class='item_img'></image>
+          </view>
+          <view style="line-height: 1.8;">
+            <view>
+              <text class='item_title'>{{item.item.itemName}}</text>
+            </view>
+            <view>
+              <text class='item_sel'>{{item.item.sel}}</text>
+            </view>
+            <view class='item_bottom'>
+              <text class='item_prices'>{{item.item.itemPrices}}</text>
+              <text class='item_count'>x{{item.item.count}}</text>
+            </view>
+            <view style=' text-align: right;'>
+              <text class='yi'>待评价</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+    </view>
+  </swiper-item>
+  <!-- 所有订单 -->
+  <swiper-item>
+    <view class='swiper_con'>
+     <scroll-view scorll-y="true" height="100%" class='item_main'>
+        <view class='item_line' wx:for="{{items}}" wx:key="item.item" bindtap='toAnswer' data-index="{{item.index}}" data-price="{{item.item.itemPrices}}" data-count="{{item.item.count}}">
+          <view class='item_left'>
+            <image src="{{preIP+item.item.itemImg[0]}}" class='item_img'></image>
+          </view>
+          <view style="line-height: 1.8;">
+            <view>
+              <text class='item_title'>{{item.item.itemName}}</text>
+            </view>
+            <view>
+              <text class='item_sel'>{{item.item.sel}}</text>
+            </view>
+            <view class='item_bottom'>
+              <text class='item_prices'>{{item.item.itemPrices}}</text>
+              <text class='item_count'>x{{item.item.count}}</text>
+            </view>
+            <view style=' text-align: right;'>
+              <text></text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+
+    </view>
+  </swiper-item>
+ 
+</swiper>
+
+
+<i-modal visible="{{ visible2 }}" bind:ok="buyTrue" bind:cancel="buyFalse">
+  <view>确认收货</view>
+</i-modal>

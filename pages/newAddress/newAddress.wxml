@@ -1,0 +1,8 @@
+<!--pages/newAddress/newAddress.wxml-->
+  <i-panel>
+    <i-input value="{{uname}}" title="收货人" autofocus placeholder="名字" bind:change="getVal" data-name='uname'/>
+    <i-input value="{{phone}}" type="number" title="联系电话" placeholder="请输入手机号" data-name='phone' bind:change="getVal"/>
+    <i-input value="{{address}}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" data-name='address' bind:change="getVal"/>
+  </i-panel>
+  <i-message id="message" />
+  <i-button type="primary" bind:click="addTo">确认添加</i-button>

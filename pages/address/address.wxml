@@ -1,0 +1,17 @@
+<!--pages/address/address.wxml-->
+<view class='addressBtn'>
+   <i-button bind:click="handleClick" type="primary" long="true" bind:click="addAddr">+ 新增收货地址</i-button>
+</view>
+
+<!-- 主要部分 -->
+<view class='addr_main' wx:for="{{detailAddr}}" wx:key="{{item.name}}">
+  <view class='addr_top'>
+    <block>
+        <text>{{item.name}}</text>
+    </block>
+      <block>
+       <text  class="addr_phone">{{item.phone}}</text>
+    </block>
+  </view>
+<text class='addr_text'> {{item.addr}}</text>
+</view>

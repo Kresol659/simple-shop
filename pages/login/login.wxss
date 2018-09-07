@@ -1,0 +1,22 @@
+/* pages/login/login.wxss */
+.reg_text{
+  width: 80rpx;
+font-weight: bold;
+  font-size: 32rpx;
+}
+.footer{
+  margin-top: 40rpx;
+  text-align: right;
+
+  padding: 20rpx;
+}
+.loginBtn{
+  border-radius: 20rpx !important;
+}
+.top_logo{
+  text-align: center;
+}
+.logo{
+  width: 300rpx;
+    height: 300rpx;
+}

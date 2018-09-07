@@ -1,0 +1,147 @@
+/* pages/my/my.wxss */
+
+.outside_main {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(241, 241, 241);
+}
+
+.user_top {
+  width: 100%;
+  margin: auto;
+  height: 300rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  background: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
+}
+
+.outside_r {
+  margin-top: 80rpx;
+  margin-left: 40rpx;
+  text-align: left;
+}
+
+.outside_f {
+  width: 150rpx;
+  margin: 70rpx 0 0 50rpx;
+}
+
+.user_head {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.outside_l {
+  text-align: center;
+  color: rgb(238, 238, 238);
+  font-size: 40rpx;
+}
+
+.outside_s {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  color: rgb(179, 75, 75);
+  font-weight: bold;
+}
+
+.sec_line {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #fff;
+  padding: 15rpx 20rpx;
+  border-radius: 15rpx;
+}
+
+.sigin_in {
+  width: 50rpx;
+  font-size: 24rpx;
+  padding: 5rpx 10rpx;
+  background-color: rgb(200, 200, 224);
+  border-radius: 15rpx;
+  color: rgb(77, 73, 73);
+}
+
+.sigin_in_b {
+  width: 52rpx;
+  font-size: 30rpx;
+  padding: 5rpx 10rpx;
+  color: rgb(77, 73, 73);
+}
+
+.sec_headtext {
+  font-size: 40rpx;
+}
+
+.sec_main {
+  line-height: 1.5;
+  color: rgb(59, 59, 59);
+}
+
+.collected {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 15rpx 20rpx;
+  border-radius: 15rpx;
+}
+
+.thir_text {
+  font-size: 30rpx;
+}
+
+.friendImg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.other_content {
+  font-size: 30rpx;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding: 30rpx 20rpx;
+  align-content: space-between;
+  border-radius: 15rpx;
+  background-color: #fff;
+}
+
+.friend_app {
+  display: flex;
+  flex-flow: row wrap;
+  line-height: 1.5;
+  justify-content: space-between;
+  height: 300rpx;
+}
+
+.other_main {
+  width: 25%;
+  color: rgb(59, 55, 55);
+  flex-grow: 1;
+}
+
+.hand_app {
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.red_split {
+  width: 15rpx;
+  height: 40rpx;
+  background-color: red;
+  margin-right: 20rpx;
+}
+
+.app_name {
+  font-size: 28rpx;
+  font-weight: bold;
+}

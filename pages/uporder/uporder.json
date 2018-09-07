@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "提交订单",
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index",
+      "i-radio-group": "../../dist/radio-group/index",
+      "i-radio": "../../dist/radio/index"
+  }
+}

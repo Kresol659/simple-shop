@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class='top_logo'>
+  <image src='../../images/logo.jpg' class='logo'></image>
+</view>
+<i-panel>
+    <i-input id='phone' value="{{ phone }}" type="number" title="手机号" placeholder="请输入手机号" maxlength="11" bind:change="getVal"/>
+    <i-input id='upwd' value="{{ upwd }}" type="password" title="密码" placeholder="请输入密码" maxlength="24" bind:change="getVal"/>
+</i-panel>
+<i-button bind:click="loginBtn" type="primary" i-class='loginBtn'>登录</i-button>
+<view class='footer'>
+<text class='reg_text'>新用户注册</text>
+</view>
+<i-message id="message" />

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "usingComponents": {
+      "i-divider": "../../dist/divider/index",
+      "i-rate": "../../dist/rate/index",
+      "i-input-number": "../../dist/input-number/index",
+      "i-button": "../../dist/button/index",
+      "i-message": "../../dist/message/index"
+    }
+
+}
